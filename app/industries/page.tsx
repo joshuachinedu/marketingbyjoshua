@@ -22,39 +22,39 @@ const industries = [
     color: 'blue'
   },
   {
+    slug: 'healthcare',
     icon: Users,
     title: 'Healthcare & Medical',
     description: 'Build trust and attract patients with professional medical website design and local healthcare marketing.',
-    color: 'red',
-    comingSoon: true
+    color: 'red'
   },
   {
+    slug: 'ecommerce',
     icon: ShoppingCart,
     title: 'E-commerce & Retail',
     description: 'Boost online sales with Shopify optimization, paid ads, and conversion-focused e-commerce strategies.',
-    color: 'purple',
-    comingSoon: true
+    color: 'purple'
   },
   {
+    slug: 'real-estate',
     icon: Building2,
     title: 'Real Estate',
     description: 'Showcase properties with stunning websites, virtual tours, and targeted property marketing campaigns.',
-    color: 'amber',
-    comingSoon: true
+    color: 'amber'
   },
   {
+    slug: 'professional-services',
     icon: Briefcase,
     title: 'Professional Services',
     description: 'Law firms, accountants, consultants - build authority and generate quality leads.',
-    color: 'slate',
-    comingSoon: true
+    color: 'slate'
   },
   {
+    slug: 'nonprofit',
     icon: Heart,
     title: 'Non-Profit & NGOs',
     description: 'Amplify your cause with donor engagement, volunteer recruitment, and awareness campaigns.',
-    color: 'pink',
-    comingSoon: true
+    color: 'pink'
   }
 ];
 
@@ -132,26 +132,6 @@ export default function IndustriesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, i) => {
               const colors = colorClasses[industry.color];
-              
-              if (industry.comingSoon) {
-                return (
-                  <div 
-                    key={i}
-                    className={`p-8 bg-white/5 border ${colors.border} rounded-2xl opacity-60`}
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className={`p-3 ${colors.bg} rounded-lg`}>
-                        <industry.icon className={`w-6 h-6 ${colors.text}`} />
-                      </div>
-                      <h3 className="text-xl font-bold">{industry.title}</h3>
-                    </div>
-                    <p className="text-gray-400 mb-4">{industry.description}</p>
-                    <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-sm text-gray-400">
-                      Coming Soon
-                    </div>
-                  </div>
-                );
-              }
               
               return (
                 <Link 
