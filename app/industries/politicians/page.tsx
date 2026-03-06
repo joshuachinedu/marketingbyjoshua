@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, TrendingUp, Users, Vote, Building, Globe, Mail } from 'lucide-react';
+import { ArrowRight, CheckCircle, TrendingUp, Users, Vote, Building, Globe, Mail, Handshake, Calendar, DollarSign, Shield } from 'lucide-react';
 
 export const metadata = {
-  title: 'Political Digital Marketing | Campaign Strategy for Politicians, Senators & Legislators',
-  description: 'Win elections with strategic digital marketing for Nigerian politicians. Campaign websites, voter engagement, social media management, and targeted ads that win votes.',
+  title: 'Political Digital Marketing | Campaign Strategy for Politicians, Senators & Legislators in Nigeria',
+  description: 'Win elections with strategic digital marketing for Nigerian politicians. Campaign websites, donation systems, voter engagement, social media management, and targeted ads that win votes.',
 };
 
 export default function PoliticiansPage() {
@@ -15,7 +15,7 @@ export default function PoliticiansPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-                Political Marketing
+                Political Marketing Nigeria
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 Win Your Election with
@@ -24,7 +24,7 @@ export default function PoliticiansPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-400 mb-8">
-                Strategic digital marketing campaigns for politicians, senators, and legislators in Nigeria. Build your brand, engage voters, and win elections with data-driven campaign strategies.
+                Strategic digital marketing campaigns for senators, legislators, commissioners, governors, and political office seekers in Nigeria. Build your brand, engage voters, and win elections with data-driven campaign strategies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
@@ -165,6 +165,28 @@ export default function PoliticiansPage() {
                   'SMS and WhatsApp campaigns',
                   'Volunteer recruitment automation'
                 ]
+              },
+              {
+                icon: DollarSign,
+                title: 'Donation & Fundraising Systems',
+                benefits: [
+                  'Secure online donation platform',
+                  'Recurring donation setup',
+                  'Campaign merchandise store',
+                  'Event ticket sales integration',
+                  'Donor management database'
+                ]
+              },
+              {
+                icon: Shield,
+                title: 'Reputation Management',
+                benefits: [
+                  'Online presence monitoring',
+                  'Positive content creation',
+                  'Crisis communication response',
+                  'Fact-checking and myth busting',
+                  'Media relations management'
+                ]
               }
             ].map((service, i) => (
               <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-blue-500/30 transition-all">
@@ -179,6 +201,209 @@ export default function PoliticiansPage() {
                     <li key={j} className="flex items-start gap-2 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                       {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 bg-[#111111]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Transparent Pricing for Political Campaigns
+            </h2>
+            <p className="text-xl text-gray-400">
+              Choose the package that fits your campaign needs and budget
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Starter Package */}
+            <div className="p-8 bg-white/5 border border-white/10 rounded-2xl">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">Starter Campaign</h3>
+                <div className="text-4xl font-bold text-blue-400">₦2.5M</div>
+                <p className="text-gray-400 text-sm mt-2">One-time payment</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                {[
+                  'Campaign website (5 pages)',
+                  'Basic social media setup (2 platforms)',
+                  'Google Ads management (₦500K ad spend included)',
+                  'Monthly performance report',
+                  'Email support'
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link 
+                href="/contact"
+                className="block w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-center rounded-full font-semibold transition-all"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Professional Package - Featured */}
+            <div className="p-8 bg-gradient-to-b from-blue-500/10 to-emerald-500/10 border border-blue-500/30 rounded-2xl relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-blue-500 text-white text-sm font-bold rounded-full">
+                MOST POPULAR
+              </div>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">Professional Campaign</h3>
+                <div className="text-4xl font-bold text-blue-400">₦5M</div>
+                <p className="text-gray-400 text-sm mt-2">One-time payment</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                {[
+                  'Premium campaign website (10 pages)',
+                  'Full social media management (4 platforms)',
+                  'Donation & fundraising system',
+                  'WhatsApp campaign setup (10K contacts)',
+                  'Google & Facebook Ads (₦1M ad spend included)',
+                  'Constituency mapping',
+                  'Bi-weekly strategy calls',
+                  'Priority support'
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link 
+                href="/contact"
+                className="block w-full py-3 bg-blue-500 hover:bg-blue-600 text-white text-center rounded-full font-semibold transition-all"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Retainer Package */}
+            <div className="p-8 bg-white/5 border border-white/10 rounded-2xl">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2">Campaign Retainer</h3>
+                <div className="text-4xl font-bold text-emerald-400">₦800K</div>
+                <p className="text-gray-400 text-sm mt-2">per month</p>
+              </div>
+              <ul className="space-y-4 mb-8">
+                {[
+                  'Everything in Professional package',
+                  'Ongoing content creation',
+                  'Daily social media posting',
+                  'Continuous ad optimization',
+                  'Weekly analytics & strategy calls',
+                  '24/7 campaign support',
+                  'Crisis management team on standby',
+                  'Post-election analytics'
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-2 text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link 
+                href="/contact"
+                className="block w-full py-3 bg-white/10 hover:bg-white/20 border border-white/10 text-center rounded-full font-semibold transition-all"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+
+          {/* Custom Campaign Note */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-400">
+              Need a custom package for a governorship, senatorial, or presidential campaign?{' '}
+              <Link href="/contact" className="text-blue-400 hover:underline">
+                Contact us for a custom quote
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Model */}
+      <section className="py-24 bg-gradient-to-b from-[#111111] to-[#0A0A0A]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              How We Work with Political Clients
+            </h2>
+            <p className="text-xl text-gray-400">
+              Flexible engagement models to match your campaign timeline and budget
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: Calendar,
+                title: 'One-Time Project',
+                description: 'Perfect for candidates with fixed campaign periods',
+                details: [
+                  'Define project scope and timeline',
+                  'Fixed price quote',
+                  'Deliverables within campaign period',
+                  'Post-campaign handover and training'
+                ]
+              },
+              {
+                icon: Handshake,
+                title: 'Retainer Model',
+                description: 'Ongoing support throughout your political journey',
+                details: [
+                  'Monthly recurring fee',
+                  'Flexible scope of work',
+                  'Priority access and support',
+                  'Scale up/down as needed'
+                ]
+              },
+              {
+                icon: Users,
+                title: 'Campaign Team',
+                description: 'Full-service digital campaign team',
+                details: [
+                  'Dedicated campaign manager',
+                  'In-house creative team',
+                  'Daily content and ad management',
+                  'Real-time reporting dashboard'
+                ]
+              },
+              {
+                icon: TrendingUp,
+                title: 'Performance-Based',
+                description: 'Results-driven engagement for serious campaigns',
+                details: [
+                  'Base fee + performance bonuses',
+                  'KPIs tied to voter engagement',
+                  'Transparent reporting',
+                  'Aligned incentives for victory'
+                ]
+              }
+            ].map((model, i) => (
+              <div key={i} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-blue-500/30 transition-all">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 bg-blue-500/10 rounded-lg">
+                    <model.icon className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-bold">{model.title}</h3>
+                </div>
+                <p className="text-gray-400 mb-4">{model.description}</p>
+                <ul className="space-y-2">
+                  {model.details.map((detail, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+                      {detail}
                     </li>
                   ))}
                 </ul>
@@ -267,15 +492,14 @@ export default function PoliticiansPage() {
             href="/contact"
             className="inline-flex items-center gap-2 px-10 py-5 bg-blue-500 hover:bg-blue-600 text-white text-lg font-bold rounded-full transition-all duration-300"
           >
-            Get Your Free Campaign Audit
+            Get Your Free Campaign Consultation
             <ArrowRight className="w-5 h-5" />
           </Link>
           <p className="text-sm text-gray-500 mt-6">
-            No obligation. Proven strategies that win elections.
+            No obligation. We serve senators, legislators, governors, commissioners, and all political office seekers across Nigeria.
           </p>
         </div>
       </section>
     </div>
   );
 }
-
